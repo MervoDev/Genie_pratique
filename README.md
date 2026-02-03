@@ -76,7 +76,37 @@ git push origin fonctionnalité/nom-feature
 - **Feedback utilisateur** : Messages de confirmation et d'erreur
 - **Accessibilité** : Labels, contrastes et navigation clavier
 
-## 🔧 Installation et Démarrage
+## � Déploiement
+
+### Déploiement sur Vercel
+
+L'application est prête pour le déploiement sur Vercel :
+
+```bash
+# Option 1: Interface Web
+# 1. Aller sur vercel.com
+# 2. Importer le repository GitHub
+# 3. Configurer : Root Directory = frontend
+
+# Option 2: CLI
+npm i -g vercel
+vercel login
+vercel --prod
+```
+
+**Configuration Vercel :**
+- **Framework** : Vite
+- **Root Directory** : `frontend`
+- **Build Command** : `npm run build`
+- **Output Directory** : `dist`
+
+Voir le [Guide de Déploiement Complet](DEPLOYMENT.md) pour plus de détails.
+
+### URL de Production
+Une fois déployé, l'application sera accessible sur :
+`https://genie-pratique.vercel.app`
+
+## 🛠️ Installation et Démarrage
 
 ```bash
 # Cloner le projet
