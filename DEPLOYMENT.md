@@ -22,6 +22,7 @@
    Build Command: npm run build
    Output Directory: dist
    Install Command: npm install
+   Node.js Version: 18.x
    ```
 
 3. **Variables d'Environnement**
@@ -107,11 +108,13 @@ L'application fonctionne avec des données de test intégrées.
    ```
 
 2. **Routes 404**
-   - Vérifier `vercel.json` pour les rewrites
+   - Vérifier `frontend/vercel.json` pour les rewrites
    - S'assurer que React Router est configuré
+   - Root Directory doit être `frontend`
 
 3. **Variables d'Environnement**
    - Préfixer avec `VITE_`
+   - Ajouter dans Vercel Dashboard > Settings > Environment Variables
    - Redéployer après modification
 
 ### Logs
