@@ -43,3 +43,8 @@ export const getTopProducts = async (): Promise<TopProduct[]> => {
   const res = await api.get("/purchases/top-products");
   return res.data;
 };
+
+export const getFinancialSummary = async () => {
+  const res = await api.get("/purchases/financial-summary");
+  return res.data;
+};
