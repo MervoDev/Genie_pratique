@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { getPurchases, Purchase } from "../service/products.service";
+import { getPurchases } from "../service/products.service";
+import type { Purchase } from "../service/products.service";
 
 export default function PurchaseHistory() {
   const [purchases, setPurchases] = useState<Purchase[]>([]);

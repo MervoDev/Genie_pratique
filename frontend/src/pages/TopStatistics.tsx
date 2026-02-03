@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { getTopProducts, TopProduct } from "../service/products.service";
+import { getTopProducts } from "../service/products.service";
+import type { TopProduct } from "../service/products.service";
 
 export default function TopStatistics() {
   const [topProducts, setTopProducts] = useState<TopProduct[]>([]);

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { getProducts, Product } from "../service/products.service";
+import { getProducts } from "../service/products.service";
+import type { Product } from "../service/products.service";
 import { Link } from "react-router-dom";
 
 export default function ProductList() {

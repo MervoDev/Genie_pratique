@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { getPurchases, Purchase, getFinancialSummary } from "../service/products.service";
+import { getPurchases, getFinancialSummary } from "../service/products.service";
+import type { Purchase } from "../service/products.service";
 
 interface FinancialData {
   totalAmount: number;
@@ -59,7 +60,6 @@ export default function FinancialSummary() {
     purchasesData.forEach(purchase => {
       const date = new Date(purchase.purchaseDate);
       const monthKey = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
-      const monthName = date.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long' });
       
       if (!monthlyMap.has(monthKey)) {
         monthlyMap.set(monthKey, { amount: 0, count: 0 });
